@@ -6,5 +6,4 @@ freebsd_12_task:
     image: freebsd-12-1-release-amd64
   install_script:
     - pkg install -y autoconf automake
-  env_script: |
-    env
+  ci_script: ./ci-script.sh
