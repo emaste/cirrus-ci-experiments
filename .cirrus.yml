@@ -7,4 +7,4 @@ freebsd_12_task:
   install_script:
     - pkg install -y autoconf automake
   create_user_script: pw useradd git
-  ci_script: su - git ./ci-script.sh
+  ci_script: su git ./ci-script.sh
