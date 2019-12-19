@@ -22,4 +22,5 @@ cat <<EOF
 OS:       $OS
 COMPILER: $COMPILER
 CPU_ARCH: $CPU_ARCH
+id:       $(id)
 EOF
