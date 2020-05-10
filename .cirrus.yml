@@ -10,4 +10,6 @@ freebsd_12_task:
     - pkg install -y autoconf automake awscli
   create_user_script: pw useradd git
   ci_script: su git ./ci-script.sh
-  artifact_script: su git ./artifact-script.sh
+  artifact_script: 
+    - mkdir -p /home/git
+    - su git ./artifact-script.sh
