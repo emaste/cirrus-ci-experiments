@@ -12,5 +12,5 @@ freebsd_12_task:
   ci_script: su git ./ci-script.sh
   artifact_script: 
     - mkdir -p /home/git
-    - chown git:git /home/git
+    - chown -R git:git /home/git
     - su git ./artifact-script.sh

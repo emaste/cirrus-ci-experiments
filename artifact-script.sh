@@ -8,6 +8,9 @@ else
 	echo "$AWS_CREDENTIALS" > ~/.aws/credentials
 fi
 
+pwd
+ls -la
+
 file="aws-$(date +%s)"
 cat > $file <<EOF
 Hello from ephemeral machine
@@ -17,6 +20,5 @@ $(ifconfig)
 $(date)
 EOF
 
+
 aws s3 cp $file s3://fluffybunnies/
-
-
