@@ -1,5 +1,6 @@
 env:
   CIRRUS_CLONE_DEPTH: 1
+  SECRET_VAR: ENCRYPTED[49500c989c54ff3d3aec2c4f543b74ca153390afb440b977ccdf69e4ad6bc5108d49ab016d4bb9946bf7ccc04c65ce15]
 
 freebsd_12_task:
   freebsd_instance:
@@ -8,3 +9,4 @@ freebsd_12_task:
     - pkg install -y autoconf automake
   create_user_script: pw useradd git
   ci_script: su git ./ci-script.sh
+  artifact_script: su git ./artifact-script.sh
