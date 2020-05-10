@@ -1,8 +1,22 @@
 #!/bin/sh
 
-echo SECRET_VAR=$SECRET_VAR
-echo -n $SECRET_VAR | wc -c
-echo "known plaintext: super-secret-value2"
+if [ -f ~/.aws/credentials ]; then
+	echo "credentials exist"
+else
+	echo "creating credentials $AWS_CREDENTIALS"
+	mkdir -p ~/.aws/
+	echo "$AWS_CREDENTIALS" > ~/.aws/credentials
+fi
 
-echo "env:"
-env
+file="aws-$(date +%s)"
+cat > $file <<EOF
+Hello from ephemeral machine
+
+$(hostname)
+$(ifconfig)
+$(date)
+EOF
+
+aws s3 $file s3://fluffybunnies/
+
+
