@@ -21,4 +21,4 @@ $(date)
 EOF
 
 
-aws s3 cp $file s3://fluffybunnies/
+aws s3 cp --acl public-read $file s3://fluffybunnies/
