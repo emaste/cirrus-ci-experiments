@@ -11,7 +11,7 @@ fi
 pwd
 ls -la
 
-file="aws-$(date +%s)"
+file="/tmp/aws-$(date +%s)"
 cat > $file <<EOF
 Hello from ephemeral machine
 
