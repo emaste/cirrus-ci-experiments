@@ -1,10 +1,8 @@
-aws_credentials: ENCRYPTED[ba6b3a52b9fe8a2bb7ce0dd40738628b36d2478ea80282dd6232dda8ea4d657db5f54884f93718412e7baf68d4f8f49f]
+freebsd_instance:
+  image: freebsd-13-0-release-amd64
+  disk: 40
 
-env:
-freebsd_task:
-  freebsd_instance:
-    image: freebsd-13-0-release-amd64
-    disk: 40
+task:
   test_script:
     gpart show
     df -h
