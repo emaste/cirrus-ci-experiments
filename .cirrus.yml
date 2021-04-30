@@ -12,5 +12,6 @@ task:
     - gpart show
     - df -h
     - gpart resize -i 3 /dev/da0
+    - gpart show
     - growfs -y /dev/gpt/rootfs
     - df -h
