@@ -4,5 +4,5 @@ freebsd_instance:
 
 task:
   test_script:
-    gpart show
-    df -h
+    - gpart show
+    - df -h
