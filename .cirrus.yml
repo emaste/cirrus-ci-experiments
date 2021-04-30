@@ -1,6 +1,7 @@
 compute_engine_instance:
   image_project: freebsd-org-cloud-dev
-  image_family: freebsd-12-1
+  #image_family: freebsd-12-1
+  image: family/freebsd-13-0
   platform: FreeBSD
   cpu: 1
   disk: 40
