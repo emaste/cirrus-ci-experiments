@@ -6,6 +6,10 @@ freebsd_instance:
 
 task:
   test_script:
+    - sysctl kern.geom.conftxt
     - camcontrol devlist
     - gpart show
+    - df -h
+    - gpart resize -i 3 /dev/da0
+    - growfs -y /dev/gpt/rootfs
     - df -h
