@@ -1,4 +1,4 @@
-freebsd_instance:
+compute_engine_instance:
   image_project: freebsd-org-cloud-dev
   image_family: freebsd-12-1
   platform: FreeBSD
