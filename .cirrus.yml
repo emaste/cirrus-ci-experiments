@@ -6,5 +6,6 @@ gce_instance:
 
 task:
   test_script:
+    - camcontrol devlist
     - gpart show
     - df -h
