@@ -14,7 +14,7 @@ task:
     - camcontrol devlist
     - gpart show
     - df -h
-    - gpart resize -i 3 /dev/da0
+    - gpart resize -i 4 /dev/da0
     - gpart show
     - growfs -y /dev/gpt/rootfs
     - df -h
