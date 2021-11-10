@@ -17,6 +17,7 @@ task:
 
   install_script:
     - pkg install -y py38-oci 
+    - pkg info
   script:
     - sh oci-setup.sh
     - cat ~/.oci/config
