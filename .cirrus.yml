@@ -6,7 +6,15 @@ compute_engine_instance:
   cpu: 1
   disk: 40
 
+
 task:
+  env:
+    OCI_USER: ENCRYPTED[e1da570833204df339392c9cfad84353cba773014f0b45fd7a1590efc6e0f7e187f1d00a398beef6a567b1ecd6c26c49]
+    OCI_PEM_KEY: pem_key
+    OCI_FINGERPRINT: oci_fingerprint
+    OCI_TENANCY: oci_tenancy
+    OCI_REGION: oci_region
+
   install_script:
     - pkg install -y py38-oci 
   script:
