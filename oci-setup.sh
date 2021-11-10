@@ -1,11 +1,14 @@
 #!/bin/sh
 
+echo HOME: $HOME
+echo USER: $USER
+
 umask 077
 
 mkdir -p $HOME/.oci
 echo "$OCI_PEM_KEY" > $HOME/.oci/oci.pem
 
-cat >~/.oci/config <<EOF
+cat > $HOME/.oci/config <<EOF
 [DEFAULT]
 user=$OCI_USER
 fingerprint=$OCI_FINGERPRINT
