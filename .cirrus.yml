@@ -8,7 +8,9 @@ compute_engine_instance:
 
 task:
   install_script:
-    - pkg install -y py38-oci
+    - pkg install -y py38-oci 
+  script:
+    - python38 ocitest.py
   test_script:
     - sysctl kern.geom.conftxt
     - camcontrol devlist
