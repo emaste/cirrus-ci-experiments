@@ -10,6 +10,8 @@ task:
   install_script:
     - pkg install -y py38-oci 
   script:
+    - sh oci-setup.sh
+    - cat ~/.oci/config
     - python38 ocitest.py
   test_script:
     - sysctl kern.geom.conftxt
