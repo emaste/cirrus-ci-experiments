@@ -21,7 +21,7 @@ task:
   script:
     - sh oci-setup.sh
     - cat ~/.oci/config
-    - python3 ocitest.py
+    - python3.8 ocitest.py
   test_script:
     - sysctl kern.geom.conftxt
     - camcontrol devlist
