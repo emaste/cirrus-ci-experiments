@@ -1,16 +1,7 @@
-aws_credentials: ENCRYPTED[ba6b3a52b9fe8a2bb7ce0dd40738628b36d2478ea80282dd6232dda8ea4d657db5f54884f93718412e7baf68d4f8f49f]
-
 env:
   CIRRUS_CLONE_DEPTH: 1
-  AWS_CREDENTIALS: ENCRYPTED[ba6b3a52b9fe8a2bb7ce0dd40738628b36d2478ea80282dd6232dda8ea4d657db5f54884f93718412e7baf68d4f8f49f]
 freebsd_13_task:
   freebsd_instance:
     image: freebsd-13-2-release-amd64
-  install_script:
-    - pkg install -y autoconf automake devel/py-awscli
-  create_user_script: pw useradd git
-  ci_script: su git ./ci-script.sh
-  artifact_script: 
-    - mkdir -p /home/git
-    - chown -R git:git /home/git
-    - su git ./artifact-script.sh
+  sysctl_script:
+    - sysctl net.inet
