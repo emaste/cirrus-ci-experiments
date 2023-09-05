@@ -5,3 +5,5 @@ freebsd_13_task:
     image: freebsd-13-2-release-amd64
   sysctl_script:
     - sysctl net.inet
+  sysctl_conf_script:
+    - cat /etc/sysctl.conf
