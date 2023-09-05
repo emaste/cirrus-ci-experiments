@@ -7,7 +7,7 @@ freebsd_13_task:
   freebsd_instance:
     image: freebsd-13-2-release-amd64
   install_script:
-    - pkg install -y autoconf automake awscli
+    - pkg install -y autoconf automake devel/py-awscli
   create_user_script: pw useradd git
   ci_script: su git ./ci-script.sh
   artifact_script: 
