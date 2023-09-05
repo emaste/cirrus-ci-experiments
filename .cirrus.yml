@@ -3,7 +3,7 @@ aws_credentials: ENCRYPTED[ba6b3a52b9fe8a2bb7ce0dd40738628b36d2478ea80282dd6232d
 env:
   CIRRUS_CLONE_DEPTH: 1
   AWS_CREDENTIALS: ENCRYPTED[ba6b3a52b9fe8a2bb7ce0dd40738628b36d2478ea80282dd6232dda8ea4d657db5f54884f93718412e7baf68d4f8f49f]
-freebsd_12_task:
+freebsd_13_task:
   freebsd_instance:
     image: freebsd-13-2-release-amd64
   install_script:
